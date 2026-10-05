@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+._*
+
+# editor / scratch
+*.swp
+.ipynb_checkpoints/
+
+# large local-only source assets (kept on disk, not in git)
+assets/bbb-background.tiff
