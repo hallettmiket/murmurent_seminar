@@ -169,6 +169,12 @@
                 max-width:34vw; text-align:center; }
   .solo-fig svg { height:62vh; width:auto; display:block; }
 
+  /* ── Build steps (progressive reveal) ────────────────────── */
+  .reveal   { opacity: 0; transition: opacity 0.45s ease; }
+  .pre-step { opacity: 1; transition: opacity 0.30s ease; }
+  .slide.step-1 .reveal   { opacity: 1; }
+  .slide.step-1 .pre-step { opacity: 0; }
+
   /* ── Slide counter ───────────────────────────────────────── */
   #counter {
     position: fixed;
@@ -328,7 +334,7 @@
 <!-- ═══════════════════════════════════════════════════════════
      SLIDE 4 — Claude Code Overview
      ═══════════════════════════════════════════════════════════ -->
-<div class="slide" id="s4">
+<div class="slide" id="s4" data-steps="1">
   <h2>Chat answers. Agentic AI <span class="purple">acts</span>.</h2>
   <div class="fig-row">
     <div class="fig-col">
@@ -391,37 +397,46 @@
     <text x="280" y="84" font-size="15" font-weight="700" fill="#4A148C">Claude Code</text>
     <text x="280" y="101" font-size="10.8" fill="#6A1B9A">rules &#183; skills &#183; memory &#183; permissions</text>
 
-    <path d="M280,112 V124 M100,124 H460 M100,124 V132 M280,124 V132 M460,124 V132"
-          fill="none" stroke="#b0b0b0" stroke-width="1.5"/>
-    <text x="296" y="121" font-size="10" fill="#999" text-anchor="start">spawns</text>
+    <!-- step 0: Claude Code talks to the model directly -->
+    <g class="pre-step">
+      <path d="M280,112 V236 H117 V274" fill="none" stroke="#8a8a8a" stroke-width="1.6"
+            marker-end="url(#a2)"/>
+    </g>
 
-    <rect x="25"  y="132" width="150" height="46" rx="7" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.6"/>
-    <text x="100" y="151" font-size="13.5" font-weight="600" fill="#1B5E20">Agent</text>
-    <text x="100" y="167" font-size="10.5" fill="#2E7D32">computation</text>
-    <rect x="205" y="132" width="150" height="46" rx="7" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.6"/>
-    <text x="280" y="151" font-size="13.5" font-weight="600" fill="#0D47A1">Agent</text>
-    <text x="280" y="167" font-size="10.5" fill="#1565C0">literature</text>
-    <rect x="385" y="132" width="150" height="46" rx="7" fill="#FBE9E7" stroke="#C62828" stroke-width="1.6"/>
-    <text x="460" y="151" font-size="13.5" font-weight="600" fill="#B71C1C">Agent</text>
-    <text x="460" y="167" font-size="10.5" fill="#C62828">critique</text>
-    <text x="549" y="160" font-size="15" fill="#bbb">&#8230;</text>
+    <!-- step 1: the agents and subagents appear -->
+    <g class="reveal">
+      <path d="M280,112 V124 M100,124 H460 M100,124 V132 M280,124 V132 M460,124 V132"
+            fill="none" stroke="#b0b0b0" stroke-width="1.5"/>
+      <text x="296" y="121" font-size="10" fill="#999" text-anchor="start">spawns</text>
 
-    <path d="M280,178 V190 M160,190 H400 M160,190 V200 M280,190 V200 M400,190 V200"
-          fill="none" stroke="#c4c4c4" stroke-width="1.4"/>
-    <text x="296" y="187" font-size="10" fill="#999" text-anchor="start">spawns</text>
+      <rect x="25"  y="132" width="150" height="46" rx="7" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.6"/>
+      <text x="100" y="151" font-size="13.5" font-weight="600" fill="#1B5E20">Agent</text>
+      <text x="100" y="167" font-size="10.5" fill="#2E7D32">computation</text>
+      <rect x="205" y="132" width="150" height="46" rx="7" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.6"/>
+      <text x="280" y="151" font-size="13.5" font-weight="600" fill="#0D47A1">Agent</text>
+      <text x="280" y="167" font-size="10.5" fill="#1565C0">literature</text>
+      <rect x="385" y="132" width="150" height="46" rx="7" fill="#FBE9E7" stroke="#C62828" stroke-width="1.6"/>
+      <text x="460" y="151" font-size="13.5" font-weight="600" fill="#B71C1C">Agent</text>
+      <text x="460" y="167" font-size="10.5" fill="#C62828">critique</text>
+      <text x="549" y="160" font-size="15" fill="#bbb">&#8230;</text>
 
-    <rect x="110" y="200" width="100" height="34" rx="6" fill="#F7F7F7" stroke="#A0A0A0" stroke-width="1.2"/>
-    <text x="160" y="221" font-size="11.2" fill="#555">Subagent</text>
-    <rect x="230" y="200" width="100" height="34" rx="6" fill="#F7F7F7" stroke="#A0A0A0" stroke-width="1.2"/>
-    <text x="280" y="221" font-size="11.2" fill="#555">Subagent</text>
-    <rect x="350" y="200" width="100" height="34" rx="6" fill="#F7F7F7" stroke="#A0A0A0" stroke-width="1.2"/>
-    <text x="400" y="221" font-size="11.2" fill="#555">Subagent</text>
-    <text x="464" y="221" font-size="15" fill="#bbb">&#8230;</text>
+      <path d="M280,178 V190 M160,190 H400 M160,190 V200 M280,190 V200 M400,190 V200"
+            fill="none" stroke="#c4c4c4" stroke-width="1.4"/>
+      <text x="296" y="187" font-size="10" fill="#999" text-anchor="start">spawns</text>
 
-    <!-- into the loop; drawn as a cycle, so nothing here claims to sit "above" the model -->
-    <path d="M160,234 V248 M280,234 V248 M400,234 V248 M160,248 H400 M280,248 V262 M117,262 H280 M117,262 V276"
-          fill="none" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#a2)"/>
-    <text x="300" y="266" font-size="10.5" font-style="italic" fill="#888" text-anchor="start">every one of them runs this loop</text>
+      <rect x="110" y="200" width="100" height="34" rx="6" fill="#F7F7F7" stroke="#A0A0A0" stroke-width="1.2"/>
+      <text x="160" y="221" font-size="11.2" fill="#555">Subagent</text>
+      <rect x="230" y="200" width="100" height="34" rx="6" fill="#F7F7F7" stroke="#A0A0A0" stroke-width="1.2"/>
+      <text x="280" y="221" font-size="11.2" fill="#555">Subagent</text>
+      <rect x="350" y="200" width="100" height="34" rx="6" fill="#F7F7F7" stroke="#A0A0A0" stroke-width="1.2"/>
+      <text x="400" y="221" font-size="11.2" fill="#555">Subagent</text>
+      <text x="464" y="221" font-size="15" fill="#bbb">&#8230;</text>
+
+      <!-- into the loop; drawn as a cycle, so nothing here claims to sit "above" the model -->
+      <path d="M160,234 V248 M280,234 V248 M400,234 V248 M160,248 H400 M280,248 V262 M117,262 H280 M117,262 V276"
+            fill="none" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#a2)"/>
+      <text x="300" y="266" font-size="10.5" font-style="italic" fill="#888" text-anchor="start">every one of them runs this loop</text>
+    </g>
 
     <rect x="10" y="280" width="215" height="56" rx="8" fill="#F2EFE9" stroke="#A89F8E" stroke-width="1.8"/>
     <text x="117" y="313" font-size="13.5" font-weight="600" fill="#5D5343">Claude models</text>
@@ -1219,14 +1234,39 @@
 
 <script>
   const slides = document.querySelectorAll('.slide');
-  let current = 0;
+  let current = 0, step = 0;
   const counter = document.getElementById('counter');
 
-  function show(idx) {
-    slides[current].classList.remove('active');
-    current = (idx + slides.length) % slides.length;
-    slides[current].classList.add('active');
+  function stepsOf(s) { return parseInt(s.dataset.steps || '0', 10); }
+
+  function paint() {
+    const s = slides[current];
+    for (let i = 1; i <= 9; i++) s.classList.remove('step-' + i);
+    if (step > 0) s.classList.add('step-' + step);
     counter.textContent = (current + 1) + ' / ' + slides.length;
+  }
+
+  function show(idx, st) {
+    slides[current].classList.remove('active');
+    for (let i = 1; i <= 9; i++) slides[current].classList.remove('step-' + i);
+    current = (idx + slides.length) % slides.length;
+    const max = stepsOf(slides[current]);
+    step = (st === undefined) ? 0 : Math.max(0, Math.min(st, max));
+    slides[current].classList.add('active');
+    paint();
+  }
+
+  function next() {
+    if (step < stepsOf(slides[current])) { step++; paint(); }
+    else show(current + 1);
+  }
+
+  function prev() {
+    if (step > 0) { step--; paint(); }
+    else {
+      const p = (current - 1 + slides.length) % slides.length;
+      show(p, stepsOf(slides[p]));   // step back into a fully built slide
+    }
   }
 
   show(0);
@@ -1234,20 +1274,20 @@
   document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'ArrowDown') {
       e.preventDefault();
-      show(current + 1);
+      next();
     } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
       e.preventDefault();
-      show(current - 1);
+      prev();
     } else if (e.key === 'Home') {
       show(0);
     } else if (e.key === 'End') {
-      show(slides.length - 1);
+      show(slides.length - 1, 9);
     }
   });
 
   document.addEventListener('click', (e) => {
-    if (e.clientX > window.innerWidth / 2) show(current + 1);
-    else show(current - 1);
+    if (e.clientX > window.innerWidth / 2) next();
+    else prev();
   });
 </script>
 </body>
