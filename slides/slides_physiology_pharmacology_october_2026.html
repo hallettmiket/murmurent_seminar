@@ -355,7 +355,7 @@
 <line x1="340" y1="212" x2="340" y2="248" marker-end="url(#arrow)" style="fill:none;stroke:rgb(137, 135, 129);color:rgb(11, 11, 11);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:anthropic-sans, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
 <g style="fill:rgb(0, 0, 0);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:anthropic-sans, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
 <rect x="70" y="252" width="540" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225, 245, 238);stroke:rgb(15, 110, 86);color:rgb(11, 11, 11);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:anthropic-sans, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-<text x="340" y="272" text-anchor="middle" dominant-baseline="central" style="fill:rgb(8, 80, 65);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:anthropic-sans, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central">Shared capability layer</text>
+<text x="340" y="272" text-anchor="middle" dominant-baseline="central" style="fill:rgb(8, 80, 65);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:anthropic-sans, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central">External tools and connectors</text>
 <text x="340" y="290" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15, 110, 86);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:anthropic-sans, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Skills, MCP connectors, memory, tool use</text>
 </g>
 <line x1="340" y1="308" x2="340" y2="344" marker-end="url(#arrow)" style="fill:none;stroke:rgb(137, 135, 129);color:rgb(11, 11, 11);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:anthropic-sans, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
@@ -430,24 +430,22 @@
     <text x="464" y="221" font-size="15" fill="#bbb">&#8230;</text>
 
     <!-- into the loop; drawn as a cycle, so nothing here claims to sit "above" the model -->
-    <path d="M160,234 V248 M280,234 V248 M400,234 V248 M160,248 H400 M280,248 V262 M120,262 H280 M120,262 V276"
+    <path d="M160,234 V248 M280,234 V248 M400,234 V248 M160,248 H400 M280,248 V262 M117,262 H280 M117,262 V276"
           fill="none" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#a2)"/>
     <text x="300" y="266" font-size="10.5" font-style="italic" fill="#888" text-anchor="start">every one of them runs this loop</text>
 
-    <rect x="20" y="280" width="200" height="56" rx="8" fill="#F2EFE9" stroke="#A89F8E" stroke-width="1.8"/>
-    <text x="120" y="302" font-size="14" font-weight="600" fill="#5D5343">Model</text>
-    <text x="120" y="320" font-size="10.5" fill="#7a6f5c">decides the next step</text>
+    <rect x="10" y="280" width="215" height="56" rx="8" fill="#F2EFE9" stroke="#A89F8E" stroke-width="1.8"/>
+    <text x="117" y="313" font-size="13.5" font-weight="600" fill="#5D5343">Claude models</text>
 
-    <rect x="340" y="280" width="200" height="56" rx="8" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.8"/>
-    <text x="440" y="302" font-size="12.6" font-weight="600" fill="#1B5E20">MCP connectors &amp; tools</text>
-    <text x="440" y="320" font-size="10.5" fill="#2E7D32">the only way out to the world</text>
+    <rect x="335" y="280" width="215" height="56" rx="8" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.8"/>
+    <text x="442" y="313" font-size="13.5" font-weight="600" fill="#1B5E20">External tools and connectors</text>
 
-    <line x1="222" y1="300" x2="336" y2="300" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#a2)"/>
+    <line x1="227" y1="300" x2="331" y2="300" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#a2)"/>
     <text x="279" y="293" font-size="10" fill="#777">calls a tool</text>
-    <line x1="338" y1="320" x2="224" y2="320" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#a2)"/>
+    <line x1="333" y1="320" x2="229" y2="320" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#a2)"/>
     <text x="281" y="335" font-size="10" fill="#777">result returns</text>
 
-    <path d="M440,336 V356 M100,356 H460 M100,356 V374 M280,356 V374 M460,356 V374"
+    <path d="M442,336 V356 M100,356 H460 M100,356 V374 M280,356 V374 M460,356 V374"
           fill="none" stroke="#c4c4c4" stroke-width="1.4"/>
     <rect x="20"  y="374" width="160" height="34" rx="6" fill="#FAFAFA" stroke="#BDBDBD" stroke-width="1.2"/>
     <text x="100" y="395" font-size="10.8" fill="#555">Your files</text>
