@@ -106,6 +106,9 @@
   .adv-card .icon { font-size: 2.2vw; margin-bottom: 1vh; }
   .adv-card h3 { font-size: 1.4vw; color: #1a1a2e; margin-bottom: 0.6vh; }
   .adv-card p  { font-size: 1.1vw; color: #555; }
+  .adv-who { margin-top: 1.1vh; padding-top: 0.8vh; border-top: 1px solid #e6e6e6;
+             font-size: 0.82vw; font-weight: 700; letter-spacing: 0.08em; }
+  .adv-who .sep { color: #ccc; font-weight: 400; }
 
   /* ── Round slides ────────────────────────────────────────── */
   .round-header {
@@ -156,15 +159,10 @@
   .section p { font-size: 1.25vw; line-height: 1.65; }
 
   /* ── Two-figure row (harness slide) ──────────────────────── */
-  .fig-row { display:flex; gap:2.2vw; align-items:flex-start; justify-content:center;
-             max-width:88vw; margin-top:1vh; width:88vw; }
+  .fig-row { display:flex; gap:0.6vw; align-items:flex-start; justify-content:center;
+             width:94vw; margin-top:1.5vh; }
   .fig-col { display:flex; flex-direction:column; align-items:center; }
-  .fig-col.wide { flex:1.55; }
-  .fig-col.narrow { flex:1; }
-  .fig-col svg { width:100%; height:auto; max-height:50vh; }
-  .fig-cap { font-size:1.0vw; color:#777; line-height:1.5; margin-top:1.2vh;
-             text-align:center; max-width:40vw; }
-  .fig-cap strong { color:#4A148C; font-weight:600; }
+  .fig-col svg { height:50vh; width:auto; display:block; }
 
   /* ── Slide counter ───────────────────────────────────────── */
   #counter {
@@ -330,7 +328,7 @@
   <h3 class="dim">The model is the engine. The harness is everything around it.</h3>
   <div class="fig-row">
     <div class="fig-col wide">
-      <svg viewBox="0 0 680 444" role="img" style="" xmlns="http://www.w3.org/2000/svg"><title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:anthropic-sans, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">How Claude harnesses relate to the underlying models</title><desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:anthropic-sans, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">A three-layer stack. At the top, four harnesses — Claude chat, Claude Code, Claude Science and the Claude API — sit inside a dashed container. Below them a shared capability layer provides skills, MCP connectors, memory and tool use. At the bottom sit the Claude models themselves across the Haiku, Sonnet, Opus and Mythos tiers.</desc>
+      <svg viewBox="0 0 772 444" role="img" style="" xmlns="http://www.w3.org/2000/svg"><title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:anthropic-sans, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">How Claude harnesses relate to the underlying models</title><desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:anthropic-sans, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">A three-layer stack. At the top, four harnesses — Claude chat, Claude Code, Claude Science and the Claude API — sit inside a dashed container. Below them a shared capability layer provides skills, MCP connectors, memory and tool use. At the bottom sit the Claude models themselves across the Haiku, Sonnet, Opus and Mythos tiers.</desc>
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="50" y="30" width="580" height="182" rx="16" fill="none" stroke="var(--border-strong)" stroke-width="0.5" stroke-dasharray="4 4" style="fill:none;stroke:color(srgb 0.0431373 0.0431373 0.0431373 / 0.2);color:rgb(11, 11, 11);stroke-width:0.5px;stroke-dasharray:4px, 4px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:anthropic-sans, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
 <text x="64" y="50" dominant-baseline="central" style="fill:rgb(11, 11, 11);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:anthropic-sans, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:14px;font-weight:500;text-anchor:start;dominant-baseline:central">Harnesses</text>
@@ -366,68 +364,94 @@
 <text x="340" y="368" text-anchor="middle" dominant-baseline="central" style="fill:rgb(68, 68, 65);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:anthropic-sans, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central">Claude models</text>
 <text x="340" y="386" text-anchor="middle" dominant-baseline="central" style="fill:rgb(95, 94, 90);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:anthropic-sans, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Haiku, Sonnet, Opus, Mythos tier</text>
 </g>
+<defs>
+  <marker id="lnk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#6A1B9A"/>
+  </marker>
+</defs>
+<g font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <path d="M612,91 H766" fill="none" stroke="#6A1B9A" stroke-width="2.4" marker-end="url(#lnk)"/>
+  <text x="689" y="82" font-size="15" font-weight="600" fill="#6A1B9A" text-anchor="middle">inside</text>
+</g>
 </svg>
-      <div class="fig-cap">Claude Code is <strong>one harness</strong>, not a peer of chat.
-      Every harness draws on the same capability layer and the same models.</div>
     </div>
     <div class="fig-col narrow">
-      <svg viewBox="0 0 470 444" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Inside a Claude Code session: your prompt drives a loop between the model and its tools">
+      <svg viewBox="0 0 560 436" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Inside Claude Code: a prompt starts a conductor that spawns agents and subagents, each running a model and tool loop">
   <defs>
-    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0,0 L10,5 L0,10 z" fill="#8a8a8a"/>
     </marker>
   </defs>
   <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" text-anchor="middle">
 
-    <!-- your prompt -->
-    <rect x="85" y="8" width="300" height="44" rx="8" fill="#FFF8E1" stroke="#B8860B" stroke-width="1.6"/>
-    <text x="235" y="27" font-size="15" font-weight="600" fill="#8a6508">Your prompt</text>
-    <text x="235" y="43" font-size="11.5" fill="#9a7a2a">plain English, no flags</text>
-    <line x1="235" y1="52" x2="235" y2="70" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#ah)"/>
+    <!-- prompt -->
+    <rect x="190" y="4" width="180" height="42" rx="7" fill="#FFF8E1" stroke="#B8860B" stroke-width="1.6"/>
+    <text x="280" y="23" font-size="14.5" font-weight="600" fill="#8a6508">Your prompt</text>
+    <text x="280" y="38" font-size="11" fill="#9a7a2a">plain English</text>
+    <line x1="280" y1="46" x2="280" y2="62" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#a2)"/>
 
-    <!-- harness -->
-    <rect x="85" y="74" width="300" height="60" rx="8" fill="#F3E5F5" stroke="#6A1B9A" stroke-width="1.8"/>
-    <text x="235" y="96" font-size="15.5" font-weight="700" fill="#4A148C">Claude Code</text>
-    <text x="235" y="113" font-size="11.5" fill="#6A1B9A">the harness: rules, agents,</text>
-    <text x="235" y="127" font-size="11.5" fill="#6A1B9A">skills, memory, permissions</text>
-    <line x1="235" y1="134" x2="235" y2="152" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#ah)"/>
+    <!-- conductor -->
+    <rect x="155" y="64" width="250" height="48" rx="8" fill="#F3E5F5" stroke="#6A1B9A" stroke-width="2"/>
+    <text x="280" y="84" font-size="15" font-weight="700" fill="#4A148C">Claude Code</text>
+    <text x="280" y="101" font-size="10.8" fill="#6A1B9A">rules &#183; skills &#183; memory &#183; permissions</text>
 
-    <!-- model -->
-    <rect x="85" y="156" width="300" height="52" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.8"/>
-    <text x="235" y="178" font-size="15" font-weight="600" fill="#0D47A1">Model</text>
-    <text x="235" y="196" font-size="11.5" fill="#1565C0">decides the next step</text>
+    <!-- branch: conductor -> agents -->
+    <path d="M280,112 V124 M100,124 H460 M100,124 V132 M280,124 V132 M460,124 V132"
+          fill="none" stroke="#b0b0b0" stroke-width="1.5"/>
+    <text x="296" y="121" font-size="10" fill="#999" text-anchor="start">spawns</text>
 
-    <!-- down arrow to tools -->
-    <line x1="200" y1="208" x2="200" y2="232" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#ah)"/>
-    <text x="150" y="224" font-size="10.5" fill="#777" text-anchor="end">calls a tool</text>
+    <rect x="25"  y="132" width="150" height="46" rx="7" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.6"/>
+    <text x="100" y="151" font-size="13.5" font-weight="600" fill="#1B5E20">Agent</text>
+    <text x="100" y="167" font-size="10.5" fill="#2E7D32">computation</text>
+    <rect x="205" y="132" width="150" height="46" rx="7" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.6"/>
+    <text x="280" y="151" font-size="13.5" font-weight="600" fill="#0D47A1">Agent</text>
+    <text x="280" y="167" font-size="10.5" fill="#1565C0">literature</text>
+    <rect x="385" y="132" width="150" height="46" rx="7" fill="#FBE9E7" stroke="#C62828" stroke-width="1.6"/>
+    <text x="460" y="151" font-size="13.5" font-weight="600" fill="#B71C1C">Agent</text>
+    <text x="460" y="167" font-size="10.5" fill="#C62828">critique</text>
+    <text x="549" y="160" font-size="15" fill="#bbb">…</text>
 
-    <!-- tools / MCP -->
-    <rect x="85" y="236" width="300" height="52" rx="8" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.8"/>
-    <text x="235" y="258" font-size="15" font-weight="600" fill="#1B5E20">MCP connectors &amp; tools</text>
-    <text x="235" y="276" font-size="11.5" fill="#2E7D32">the only way out to the world</text>
-
-    <!-- return loop: tools -> model -->
-    <path d="M385,262 H418 V182 H385" fill="none" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#ah)"/>
-    <text x="432" y="226" font-size="10.5" fill="#777" text-anchor="middle" transform="rotate(90 432 226)">results come back</text>
-
-    <!-- fan out to resources -->
-    <path d="M235,288 V304 M81,304 H389 M81,304 V320 M235,304 V320 M389,304 V320"
+    <!-- branch: agent -> subagents -->
+    <path d="M280,178 V190 M160,190 H400 M160,190 V200 M280,190 V200 M400,190 V200"
           fill="none" stroke="#c4c4c4" stroke-width="1.4"/>
-    <rect x="12"  y="322" width="138" height="48" rx="6" fill="#FAFAFA" stroke="#BDBDBD" stroke-width="1.2"/>
-    <text x="81"  y="342" font-size="11.5" font-weight="600" fill="#555">Your files</text>
-    <text x="81"  y="358" font-size="10.5" fill="#777">code, data, notes</text>
-    <rect x="166" y="322" width="138" height="48" rx="6" fill="#FAFAFA" stroke="#BDBDBD" stroke-width="1.2"/>
-    <text x="235" y="342" font-size="11.5" font-weight="600" fill="#555">Databases</text>
-    <text x="235" y="358" font-size="10.5" fill="#777">PubChem, ChEMBL, PDB</text>
-    <rect x="320" y="322" width="138" height="48" rx="6" fill="#FAFAFA" stroke="#BDBDBD" stroke-width="1.2"/>
-    <text x="389" y="342" font-size="11.5" font-weight="600" fill="#555">Literature</text>
-    <text x="389" y="358" font-size="10.5" fill="#777">PubMed, full text</text>
+    <text x="296" y="187" font-size="10" fill="#999" text-anchor="start">spawns</text>
 
-    <text x="235" y="400" font-size="12.5" font-style="italic" fill="#888">the loop repeats until the goal is met</text>
+    <rect x="110" y="200" width="100" height="34" rx="6" fill="#F7F7F7" stroke="#A0A0A0" stroke-width="1.2"/>
+    <text x="160" y="221" font-size="11.2" fill="#555">Subagent</text>
+    <rect x="230" y="200" width="100" height="34" rx="6" fill="#F7F7F7" stroke="#A0A0A0" stroke-width="1.2"/>
+    <text x="280" y="221" font-size="11.2" fill="#555">Subagent</text>
+    <rect x="350" y="200" width="100" height="34" rx="6" fill="#F7F7F7" stroke="#A0A0A0" stroke-width="1.2"/>
+    <text x="400" y="221" font-size="11.2" fill="#555">Subagent</text>
+    <text x="464" y="221" font-size="15" fill="#bbb">…</text>
+
+    <!-- the loop every one of them runs -->
+    <line x1="60" y1="252" x2="500" y2="252" stroke="#e8e8e8" stroke-width="1"/>
+    <text x="280" y="268" font-size="11" font-style="italic" fill="#888">every one of them runs this loop</text>
+
+    <rect x="155" y="278" width="250" height="42" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.8"/>
+    <text x="280" y="296" font-size="14" font-weight="600" fill="#0D47A1">Model</text>
+    <text x="280" y="312" font-size="10.5" fill="#1565C0">decides the next step</text>
+
+    <line x1="250" y1="320" x2="250" y2="338" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#a2)"/>
+    <text x="240" y="333" font-size="10" fill="#777" text-anchor="end">calls a tool</text>
+
+    <rect x="155" y="340" width="250" height="42" rx="8" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.8"/>
+    <text x="280" y="358" font-size="13.2" font-weight="600" fill="#1B5E20">MCP connectors &amp; tools</text>
+    <text x="280" y="374" font-size="10.5" fill="#2E7D32">the only way out to the world</text>
+
+    <path d="M405,361 H440 V299 H405" fill="none" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#a2)"/>
+    <text x="452" y="330" font-size="9.8" fill="#777" transform="rotate(90 452 330)">result returns</text>
+
+    <path d="M280,382 V392 M95,392 H465 M95,392 V400 M280,392 V400 M465,392 V400"
+          fill="none" stroke="#c4c4c4" stroke-width="1.4"/>
+    <rect x="20"  y="400" width="150" height="30" rx="6" fill="#FAFAFA" stroke="#BDBDBD" stroke-width="1.2"/>
+    <text x="95"  y="420" font-size="10.8" fill="#555">Your files</text>
+    <rect x="205" y="400" width="150" height="30" rx="6" fill="#FAFAFA" stroke="#BDBDBD" stroke-width="1.2"/>
+    <text x="280" y="420" font-size="10.8" fill="#555">Databases</text>
+    <rect x="390" y="400" width="150" height="30" rx="6" fill="#FAFAFA" stroke="#BDBDBD" stroke-width="1.2"/>
+    <text x="465" y="420" font-size="10.8" fill="#555">Literature</text>
   </g>
 </svg>
-      <div class="fig-cap">Inside a session your prompt steers a <strong>loop</strong>:
-      the model decides, a tool reaches the world, the result comes back.</div>
     </div>
   </div>
 </div>
@@ -482,37 +506,43 @@
      ═══════════════════════════════════════════════════════════ -->
 <div class="slide" id="s8">
   <h2>It Takes a Village</h2>
-  <h3 class="dim">Advantages of the multi-agent approach</h3>
+  <h3 class="dim">Which advantage comes from which agent &mdash; and which from Claude Code itself</h3>
   <div class="adv-grid">
     <div class="adv-card">
       <div class="icon">&#9889;</div>
       <h3>Parallelism</h3>
       <p>Four agents working simultaneously. Nothing waits in line.</p>
+      <div class="adv-who"><span style="color:#2E7D32;">BLACKSMITH</span><span class="sep"> &middot; </span><span style="color:#0077CC;">BOOKWORM</span><span class="sep"> &middot; </span><span style="color:#6A1B9A;">ARTIST</span></div>
     </div>
     <div class="adv-card">
       <div class="icon">&#127919;</div>
       <h3>Specialisation</h3>
       <p>One job per agent, tuned tools and instructions. Four experts, not one generalist.</p>
+      <div class="adv-who"><span style="color:#2E7D32;">BLACKSMITH</span><span class="sep"> &middot; </span><span style="color:#0077CC;">BOOKWORM</span><span class="sep"> &middot; </span><span style="color:#6A1B9A;">ARTIST</span></div>
     </div>
     <div class="adv-card">
       <div class="icon">&#128269;</div>
       <h3>Built-in Scrutiny</h3>
       <p>Dedicated critic catches mistakes early, not after the fact.</p>
+      <div class="adv-who"><span style="color:#C62828;">ADVERSARY</span></div>
     </div>
     <div class="adv-card">
       <div class="icon">&#128172;</div>
       <h3>Natural Language Control</h3>
       <p>Plain English instructions. No code, no config, no CLI flags.</p>
+      <div class="adv-who"><span style="color:#4A148C;">CLAUDE CODE</span></div>
     </div>
     <div class="adv-card">
       <div class="icon">&#128257;</div>
       <h3>Reproducibility</h3>
       <p>All work logged, prompts saved, outputs versioned. Anyone can re-run.</p>
+      <div class="adv-who"><span style="color:#4A148C;">CLAUDE CODE</span></div>
     </div>
     <div class="adv-card">
       <div class="icon">&#127891;</div>
       <h3>Accessibility</h3>
       <p>No terminal experience needed. You bring the science, AI handles the code.</p>
+      <div class="adv-who"><span style="color:#4A148C;">CLAUDE CODE</span></div>
     </div>
   </div>
 </div>
@@ -634,7 +664,7 @@
     <tbody>
       <tr>
         <td>Context</td>
-        <td><span class="dim">&mdash;</span></td>
+        <td>Empty Claude session</td>
         <td>Upload the manuscript, the seminar, the associated papers &mdash; before asking anything</td>
       </tr>
       <tr>
