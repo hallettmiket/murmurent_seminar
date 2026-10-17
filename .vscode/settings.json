@@ -1,0 +1,15 @@
+{
+  "//": "Per-folder VSCode settings for a murmurent project. Written by core.project_cc_init.bootstrap_local. Edit freely \u2014 murmurent preserves user-modified files on re-bootstrap.",
+  "window.title": "Murmurent \u2014 ${rootName}${separator}${activeEditorMedium}${separator}${dirty}",
+  "window.titleSeparator": "  \u00b7  ",
+  "workbench.activityBar.location": "end",
+  "workbench.sideBar.location": "right",
+  "terminal.integrated.defaultLocation": "editor",
+  "terminal.integrated.tabs.location": "right",
+  "task.allowAutomaticTasks": "on",
+  "files.exclude": {
+    "**/.pytest_cache": true,
+    "**/__pycache__": true,
+    "**/.venv": true
+  }
+}

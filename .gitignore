@@ -8,3 +8,4 @@
 
 # large local-only source assets (kept on disk, not in git)
 assets/bbb-background.tiff
+.claude/settings.json
