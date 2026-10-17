@@ -8,4 +8,10 @@
 
 # large local-only source assets (kept on disk, not in git)
 assets/bbb-background.tiff
+
+# videos: kept on biodatsci under /data/lab_vm/append_only/murmurent_seminar/
+movies/
+animations/
+*.mp4
+*.mov
 .claude/settings.json

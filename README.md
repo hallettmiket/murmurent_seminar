@@ -38,6 +38,13 @@ Clicking the right or left half of the window also advances or goes back.
   originals; the decks carry their own embedded copies. One oversized working
   file, `assets/bbb-background.tiff`, is deliberately kept out of git and lives
   only on the author's machine.
+- **Videos are not in git.** They are too large for GitHub. The originals are
+  on the lab server `biodatsci`, in
+  `/data/lab_vm/append_only/murmurent_seminar/`, with the same folder names as
+  here (`movies/`, `animations/`, `assets/`). Copy one down with, for example,
+  `rsync biodatsci:/data/lab_vm/append_only/murmurent_seminar/movies/FizzFarm.mp4 movies/`.
+  That folder is append-only: add a new version as `name_2.mp4` rather than
+  replacing a file.
 
 ## Related repositories
 
