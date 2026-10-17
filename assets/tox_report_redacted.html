@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tox Assessment: 5c &amp; 8c (formulas redacted)</title><style>
+:root{--bg:#fbfbfa;--card:#fff;--ink:#1a1a18;--mut:#6b6b66;--line:#e3e3df;
+ --ok:#2f6f4f;--warn:#b4771f;--bad:#b4331f;--okbg:#eef5f0;--warnbg:#fbf3e6;--badbg:#fbecea;}
+:root:not([data-theme="light"]){@media (prefers-color-scheme:dark){
+ :root{--bg:#161614;--card:#1e1e1b;--ink:#eceae4;--mut:#9c9a93;--line:#333330;
+ --ok:#7fc4a0;--warn:#e0b05f;--bad:#e08a7a;--okbg:#1c2a22;--warnbg:#2c2519;--badbg:#2e1e1b;}}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font:15px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:2rem 16px 5rem}
+h1{font-size:1.6rem;margin:0 0 .3rem} h2{font-size:1.15rem;margin:2.2rem 0 .6rem;
+ padding-bottom:.3rem;border-bottom:1px solid var(--line)}
+h4{font-size:.95rem;margin:1rem 0 .3rem}
+.sub{color:var(--mut);margin:0 0 1.5rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;
+ padding:1rem 1.2rem;margin:1rem 0}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{padding:.35rem .5rem;border-bottom:1px solid var(--line);text-align:right}
+th:first-child,td:first-child{text-align:left}
+thead th{color:var(--mut);font-weight:600;position:sticky;top:0;background:var(--card)}
+tr.sec th{text-align:left;background:var(--bg);color:var(--mut);font-size:.8rem;
+ text-transform:uppercase;letter-spacing:.05em;padding-top:.9rem}
+td.ep{font-weight:500}
+td.ok{background:var(--okbg)} td.warn{background:var(--warnbg);color:var(--warn);font-weight:600}
+td.bad{background:var(--badbg);color:var(--bad);font-weight:700}
+.pct{color:var(--mut);font-size:.78rem;font-weight:400}
+.note{color:var(--mut);font-size:.88rem}
+.key{display:flex;gap:1.2rem;flex-wrap:wrap;font-size:.85rem;color:var(--mut);margin:.5rem 0}
+.key i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:.35rem;
+ vertical-align:middle}
+ul{margin:.3rem 0 .6rem 1.1rem;padding:0} li{margin:.15rem 0;font-size:.88rem}
+.warnbox{border-left:3px solid var(--warn);background:var(--warnbg);padding:.8rem 1rem;
+ border-radius:0 8px 8px 0;margin:1rem 0}
+.redacted span{filter:blur(4px);background:#c9c9c4;color:#8a8a85;border-radius:3px;padding:0 .3rem;user-select:none}</style></head><body><div class="wrap">
+
+<h1>In-silico toxicity &amp; developability assessment</h1>
+<p class="sub">Subjects: <b>5c</b> and <b>8c</b>. References: <b>Sulfopin</b>
+(published covalent Pin1 probe) and <b>Atorvastatin</b> (marketed drug, included
+as a calibration control).</p>
+
+<div class="warnbox">
+<b>This is not a toxicology package.</b> It is the in-silico assessment that
+precedes one. ICH M7 requires two complementary QSAR methodologies (expert
+rule-based <i>and</i> statistical) with expert review; the predictions here come
+from a single statistical model. No assay has been run. For a covalent series
+the decisive experiments &mdash; glutathione trapping, intrinsic thiol
+reactivity, cysteine-proteome selectivity &mdash; have no in-silico surrogate at
+all. See <i>Limitations</i>.
+</div>
+
+<h2>1 &middot; Physicochemical &amp; developability</h2>
+<div class="card"><table><thead><tr><th>Property</th><th>5c</th><th>8c</th><th>Sulfopin</th><th>Atorvastatin</th></tr></thead>
+<tbody><tr><td class='ep'>Formula</td><td class="redacted"><span>CXXHXXXxNXOXSX</span></td><td class="redacted"><span>CXXHXXXxNXOXSX</span></td><td>C11H20ClNO3S</td><td>C33H35FN2O5</td></tr><tr><td class='ep'>MW</td><td>485.43</td><td>556.95</td><td>281.81</td><td>558.65</td></tr><tr><td class='ep'>Heavy atoms</td><td>28</td><td>33</td><td>17</td><td>41</td></tr><tr><td class='ep'>cLogP</td><td>3.38</td><td>5.32</td><td>1.29</td><td>6.31</td></tr><tr><td class='ep'>TPSA</td><td>84.8</td><td>82.8</td><td>54.5</td><td>111.8</td></tr><tr><td class='ep'>HBD</td><td>0</td><td>0</td><td>0</td><td>4</td></tr><tr><td class='ep'>HBA</td><td>8</td><td>6</td><td>3</td><td>4</td></tr><tr><td class='ep'>Rotatable bonds</td><td>5</td><td>4</td><td>3</td><td>12</td></tr><tr><td class='ep'>Fsp3</td><td>0.5</td><td>0.667</td><td>0.909</td><td>0.273</td></tr><tr><td class='ep'>Aromatic rings</td><td>2</td><td>1</td><td>0</td><td>4</td></tr><tr><td class='ep'>QED</td><td>0.646</td><td>0.501</td><td>0.733</td><td>0.163</td></tr><tr><td class='ep'>Lipinski violations</td><td>0</td><td>2</td><td>0</td><td>2</td></tr><tr><td class='ep'>Veber</td><td>pass</td><td>pass</td><td>pass</td><td>fail</td></tr></tbody></table></div>
+
+<h2>2 &middot; Predicted toxicity &amp; ADME endpoints</h2>
+<div class="card">
+<div class="key">
+  <span><i style="background:var(--okbg);border:1px solid var(--ok)"></i>below concern</span>
+  <span><i style="background:var(--warnbg);border:1px solid var(--warn)"></i>0.50&ndash;0.70</span>
+  <span><i style="background:var(--badbg);border:1px solid var(--bad)"></i>&ge;0.70</span>
+  <span>percentile = rank among DrugBank-approved drugs</span>
+</div>
+<table><thead><tr><th>Endpoint</th><th>5c</th><th>8c</th><th>Sulfopin</th><th>Atorvastatin</th></tr></thead><tbody><tr class="sec"><th colspan="5">Genotoxicity & carcinogenicity</th></tr>
+<tr><td class='ep'>Ames mutagenicity</td><td class="warn">0.604 <span class="pct">86%ile</span></td><td class="ok">0.351 <span class="pct">65%ile</span></td><td class="bad">0.729 <span class="pct">92%ile</span></td><td class="ok">0.087 <span class="pct">24%ile</span></td></tr>
+<tr><td class='ep'>Carcinogenicity</td><td class="ok">0.366 <span class="pct">84%ile</span></td><td class="ok">0.158 <span class="pct">48%ile</span></td><td class="ok">0.404 <span class="pct">88%ile</span></td><td class="ok">0.493 <span class="pct">93%ile</span></td></tr>
+<tr class="sec"><th colspan="5">Cardiotoxicity</th></tr>
+<tr><td class='ep'>hERG blockade</td><td class="ok">0.429 <span class="pct">59%ile</span></td><td class="bad">0.780 <span class="pct">77%ile</span></td><td class="ok">0.174 <span class="pct">40%ile</span></td><td class="bad">0.766 <span class="pct">76%ile</span></td></tr>
+<tr class="sec"><th colspan="5">Hepatotoxicity & mitochondrial</th></tr>
+<tr><td class='ep'>Drug-induced liver injury</td><td class="bad">0.802 <span class="pct">73%ile</span></td><td class="warn">0.575 <span class="pct">59%ile</span></td><td class="ok">0.319 <span class="pct">45%ile</span></td><td class="bad">0.901 <span class="pct">83%ile</span></td></tr>
+<tr><td class='ep'>Mitochondrial membrane potential</td><td class="ok">0.174 <span class="pct">72%ile</span></td><td class="warn">0.536 <span class="pct">89%ile</span></td><td class="ok">0.039 <span class="pct">52%ile</span></td><td class="warn">0.692 <span class="pct">94%ile</span></td></tr>
+<tr><td class='ep'>Oxidative-stress response (ARE)</td><td class="warn">0.525 <span class="pct">85%ile</span></td><td class="warn">0.675 <span class="pct">93%ile</span></td><td class="ok">0.392 <span class="pct">77%ile</span></td><td class="warn">0.523 <span class="pct">85%ile</span></td></tr>
+<tr><td class='ep'>p53 stress response</td><td class="ok">0.183 <span class="pct">83%ile</span></td><td class="ok">0.154 <span class="pct">80%ile</span></td><td class="ok">0.130 <span class="pct">77%ile</span></td><td class="ok">0.265 <span class="pct">89%ile</span></td></tr>
+<tr><td class='ep'>Genotoxic stress (ATAD5)</td><td class="ok">0.053 <span class="pct">78%ile</span></td><td class="ok">0.030 <span class="pct">70%ile</span></td><td class="ok">0.038 <span class="pct">73%ile</span></td><td class="ok">0.058 <span class="pct">79%ile</span></td></tr>
+<tr class="sec"><th colspan="5">Nuclear-receptor activity (Tox21)</th></tr>
+<tr><td class='ep'>Androgen receptor</td><td class="ok">0.019 <span class="pct">38%ile</span></td><td class="ok">0.006 <span class="pct">10%ile</span></td><td class="ok">0.022 <span class="pct">44%ile</span></td><td class="ok">0.017 <span class="pct">34%ile</span></td></tr>
+<tr><td class='ep'>Aryl hydrocarbon receptor</td><td class="ok">0.021 <span class="pct">50%ile</span></td><td class="ok">0.015 <span class="pct">46%ile</span></td><td class="ok">0.003 <span class="pct">21%ile</span></td><td class="ok">0.105 <span class="pct">72%ile</span></td></tr>
+<tr><td class='ep'>Estrogen receptor</td><td class="ok">0.107 <span class="pct">60%ile</span></td><td class="ok">0.064 <span class="pct">34%ile</span></td><td class="ok">0.177 <span class="pct">80%ile</span></td><td class="ok">0.270 <span class="pct">89%ile</span></td></tr>
+<tr class="sec"><th colspan="5">Clinical-stage risk</th></tr>
+<tr><td class='ep'>Clinical-trial toxicity failure</td><td class="ok">0.109 <span class="pct">53%ile</span></td><td class="ok">0.047 <span class="pct">31%ile</span></td><td class="ok">0.109 <span class="pct">53%ile</span></td><td class="ok">0.186 <span class="pct">68%ile</span></td></tr>
+<tr><td class='ep'>Skin sensitisation</td><td class="warn">0.668 <span class="pct">69%ile</span></td><td class="warn">0.569 <span class="pct">56%ile</span></td><td class="bad">0.837 <span class="pct">88%ile</span></td><td class="ok">0.272 <span class="pct">18%ile</span></td></tr>
+<tr class="sec"><th colspan="5">CYP inhibition (DDI risk)</th></tr>
+<tr><td class='ep'>CYP1A2</td><td class="ok">0.016 <span class="pct">35%ile</span></td><td class="ok">0.008 <span class="pct">29%ile</span></td><td class="ok">0.006 <span class="pct">26%ile</span></td><td class="ok">0.088 <span class="pct">54%ile</span></td></tr>
+<tr><td class='ep'>CYP2C9</td><td class="ok">0.379 <span class="pct">85%ile</span></td><td class="warn">0.613 <span class="pct">93%ile</span></td><td class="ok">0.052 <span class="pct">56%ile</span></td><td class="warn">0.677 <span class="pct">94%ile</span></td></tr>
+<tr><td class='ep'>CYP2C19</td><td class="warn">0.592 <span class="pct">88%ile</span></td><td class="bad">0.830 <span class="pct">95%ile</span></td><td class="ok">0.173 <span class="pct">62%ile</span></td><td class="warn">0.581 <span class="pct">88%ile</span></td></tr>
+<tr><td class='ep'>CYP2D6</td><td class="ok">0.143 <span class="pct">66%ile</span></td><td class="ok">0.158 <span class="pct">68%ile</span></td><td class="ok">0.043 <span class="pct">47%ile</span></td><td class="ok">0.152 <span class="pct">68%ile</span></td></tr>
+<tr><td class='ep'>CYP3A4</td><td class="warn">0.519 <span class="pct">83%ile</span></td><td class="bad">0.939 <span class="pct">96%ile</span></td><td class="ok">0.041 <span class="pct">47%ile</span></td><td class="ok">0.328 <span class="pct">76%ile</span></td></tr>
+<tr class="sec"><th colspan="5">ADME / exposure</th></tr>
+<tr><td class='ep'>Oral bioavailability</td><td class="ok">0.643 <span class="pct">26%ile</span></td><td class="ok">0.515 <span class="pct">18%ile</span></td><td class="ok">0.731 <span class="pct">38%ile</span></td><td class="ok">0.815 <span class="pct">54%ile</span></td></tr>
+<tr><td class='ep'>Human intestinal absorption</td><td class="ok">0.990 <span class="pct">39%ile</span></td><td class="ok">0.999 <span class="pct">59%ile</span></td><td class="ok">0.942 <span class="pct">30%ile</span></td><td class="ok">0.980 <span class="pct">36%ile</span></td></tr>
+<tr><td class='ep'>P-gp substrate</td><td class="">0.372 <span class="pct">72%ile</span></td><td class="">0.740 <span class="pct">87%ile</span></td><td class="">0.056 <span class="pct">47%ile</span></td><td class="">0.892 <span class="pct">93%ile</span></td></tr>
+<tr><td class='ep'>Blood-brain barrier penetration</td><td class="">0.671 <span class="pct">46%ile</span></td><td class="">0.759 <span class="pct">54%ile</span></td><td class="">0.776 <span class="pct">55%ile</span></td><td class="">0.235 <span class="pct">15%ile</span></td></tr>
+<tr><td class='ep'>Plasma protein binding (%)</td><td class="">84.818 <span class="pct">61%ile</span></td><td class="">101.678 <span class="pct">92%ile</span></td><td class="">44.273 <span class="pct">24%ile</span></td><td class="">100.402 <span class="pct">90%ile</span></td></tr>
+<tr><td class='ep'>Volume of distribution (L/kg, log)</td><td class="">0.497 <span class="pct">40%ile</span></td><td class="">5.987 <span class="pct">79%ile</span></td><td class="">-2.148 <span class="pct">16%ile</span></td><td class="">-1.558 <span class="pct">21%ile</span></td></tr>
+<tr><td class='ep'>Hepatocyte clearance (uL/min/1e6)</td><td class="">26.029 <span class="pct">45%ile</span></td><td class="">42.400 <span class="pct">59%ile</span></td><td class="">60.773 <span class="pct">70%ile</span></td><td class="">8.601 <span class="pct">24%ile</span></td></tr>
+<tr><td class='ep'>Microsomal clearance (uL/min/mg)</td><td class="">33.679 <span class="pct">57%ile</span></td><td class="">72.725 <span class="pct">82%ile</span></td><td class="">37.025 <span class="pct">60%ile</span></td><td class="">10.690 <span class="pct">34%ile</span></td></tr>
+<tr><td class='ep'>Half-life (h)</td><td class="">5.222 <span class="pct">31%ile</span></td><td class="">54.151 <span class="pct">83%ile</span></td><td class="">1.907 <span class="pct">25%ile</span></td><td class="">48.411 <span class="pct">81%ile</span></td></tr>
+<tr><td class='ep'>Aqueous solubility (log mol/L)</td><td class="">-3.514 <span class="pct">42%ile</span></td><td class="">-5.423 <span class="pct">9%ile</span></td><td class="">-1.871 <span class="pct">73%ile</span></td><td class="">-5.003 <span class="pct">14%ile</span></td></tr></tbody></table>
+<p class="note">Classifier outputs are probabilities, not rates. Regression
+endpoints (clearance, half-life, PPB, VDss, solubility) are unflagged and given
+for context only.</p>
+</div>
+
+<h2>3 &middot; Structural alerts</h2>
+<div class="card"><h4>5c &mdash; 3 of 13 catalogues fire</h4><ul><li><b>NIH</b>: halo_imino</li><li><b>CHEMBL_BMS</b>: halo_imino</li><li><b>CHEMBL_Inpharmatica</b>: Filter24_react_imide</li></ul><h4>8c &mdash; 4 of 13 catalogues fire</h4><ul><li><b>NIH</b>: halo_imino</li><li><b>CHEMBL_BMS</b>: halo_imino</li><li><b>CHEMBL_Inpharmatica</b>: Filter24_react_imide</li><li><b>CHEMBL_LINT</b>: N-C-Hal or cyano methyl, aryl bromide</li></ul><h4>Sulfopin &mdash; 9 of 13 catalogues fire</h4><ul><li><b>BRENK</b>: alkyl_halide</li><li><b>NIH</b>: alpha_halo_carbonyl, primary_halide_sulfate</li><li><b>CHEMBL_BMS</b>: alpha_halo_carbonyl, primary_halide_sulfate</li><li><b>CHEMBL_Dundee</b>: alkyl halide</li><li><b>CHEMBL_Glaxo</b>: R1 Reactive alkyl halides</li><li><b>CHEMBL_Inpharmatica</b>: Filter26_alkyl_halide, Filter4_alpha_halo_carbonyl</li><li><b>CHEMBL_LINT</b>: alkyl halide, alpha halo carbonyl</li><li><b>CHEMBL_MLSMR</b>: alkyl halide</li><li><b>CHEMBL_SureChEMBL</b>: alkyl_halides, reactive_carbonyls</li></ul><h4>Atorvastatin &mdash; 2 of 13 catalogues fire</h4><ul><li><b>ZINC</b>: Non-Hydrogen_atoms</li><li><b>CHEMBL_MLSMR</b>: Long aliphatic chain</li></ul>
+<p class="note">Thirteen medicinal-chemistry reject lists. An alert means a motif
+appears on a library-design filter, not that a compound is toxic. For a designed
+covalent inhibitor the warhead will always fire; what matters is whether
+anything <i>else</i> does.</p></div>
+
+<h2>4 &middot; Limitations and required experimental work</h2>
+<div class="card">
+<p><b>Not assessed by anything here:</b></p>
+<ul>
+<li><b>Intrinsic thiol reactivity (k<sub>GSH</sub>)</b> &mdash; the primary
+safety determinant for a covalent inhibitor. No in-silico surrogate.</li>
+<li><b>Cysteine-proteome selectivity</b> &mdash; off-target covalent
+modification. Requires chemoproteomics (e.g. isoTOP-ABPP).</li>
+<li><b>Reactive-metabolite formation</b> &mdash; GSH-adduct trapping in
+microsomes; not predicted here.</li>
+<li><b>Time-dependent CYP inhibition</b> &mdash; distinct from the reversible
+inhibition predicted above, and more consequential.</li>
+<li><b>ICH M7 second methodology</b> &mdash; an expert rule-based system
+(Derek/Leadscope) plus expert review of every positive and out-of-domain call.</li>
+</ul>
+<p class="note">Generated by <code>tox_report.py</code>. Predictions: ADMET-AI
+(Chemprop-RDKit ensemble, Therapeutics Data Commons). Alerts: RDKit
+FilterCatalog. Descriptors: RDKit.</p>
+</div>
+</div></body></html>
