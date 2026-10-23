@@ -47,7 +47,9 @@ Clicking the right or left half of the window also advances or goes back.
   replacing a file.
 - **The October deck plays a movie on slide 16**, from `movies/`. Before giving
   the talk from a new machine, fetch it:
-  `rsync "biodatsci:/data/lab_vm/append_only/murmurent_seminar/movies/murmurent_getting_started_1080p (1).mp4" movies/`.
+  `rsync "biodatsci:'/data/lab_vm/append_only/murmurent_seminar/movies/murmurent_getting_started_1080p (1).mp4'" movies/`.
+  The inner single quotes are needed because the file name has a space and
+  brackets, which the server's shell would otherwise split.
   Without it the slide shows an empty video frame.
 
 ## Related repositories
