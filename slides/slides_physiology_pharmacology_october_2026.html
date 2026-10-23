@@ -763,7 +763,7 @@
   </p>
   <!-- The movie is not in git (too large). It plays from ../movies/, which is
        gitignored; fetch it from biodatsci as the README describes. -->
-  <video src="../movies/murmurent_getting_started_1080p.mp4" controls preload="metadata" playsinline
+  <video id="getting-started-movie" src="../movies/murmurent_getting_started_1080p.mp4" controls muted preload="metadata" playsinline
          style="width:auto; height:auto; max-width:60vw; max-height:36vh; margin-top:1.8vh; flex-shrink:0;
                 border-radius:6px; box-shadow:0 2px 12px rgba(0,0,0,0.12); background:#000;">
     Getting started with Murmurent (video)
@@ -1395,6 +1395,17 @@ FilterCatalog. Descriptors: RDKit.</p>
     const host = document.getElementById('tox-report-host');
     const tpl = document.getElementById('tox-report-template');
     if (host && tpl) host.attachShadow({ mode: 'open' }).appendChild(tpl.content.cloneNode(true));
+  })();
+
+  // The getting-started movie plays silent at three times normal speed. The
+  // rate is set again on load and on play, because loading a video resets it.
+  (function () {
+    const movie = document.getElementById('getting-started-movie');
+    if (!movie) return;
+    const fast = () => { movie.defaultPlaybackRate = 3; movie.playbackRate = 3; movie.muted = true; };
+    fast();
+    movie.addEventListener('loadedmetadata', fast);
+    movie.addEventListener('play', fast);
   })();
 
   show(0);
